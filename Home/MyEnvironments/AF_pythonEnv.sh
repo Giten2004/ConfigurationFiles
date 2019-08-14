@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This is for AF 
+export RS_BUILDKIT_PYTHON_PATH="$RS_BUILDKIT/python3"
+export RS_BUILDKIT_PYTHON_VERSION="3.6"
+
+
+export RS_BUILDKIT_PYTHON_LIB="$RS_BUILDKIT_PYTHON_PATH/lib:$RS_BUILDKIT_PYTHON_PATH/lib64"
+
+unset PYTHONPATH
+unset PYTHONHOME
