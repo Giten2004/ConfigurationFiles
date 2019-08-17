@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 
 
+# grouplist in yum
+yum grouplist | more
+
+yum grouplist | grep Development
+
+yum groupinfo Development tools
+
+yum  groupinstall Development tools
+
+
+
 # https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/
 # check dev environment
 sudo yum groupinstall "Development Tools"
