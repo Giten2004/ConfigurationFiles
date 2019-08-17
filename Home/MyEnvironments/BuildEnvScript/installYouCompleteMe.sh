@@ -27,4 +27,5 @@ cd ~/.vim/bundle/YouCompleteMe
 
 git submodule update --init --recursive
 
-python ./install.py
+# python ./install.py
+python3 install.py --all
