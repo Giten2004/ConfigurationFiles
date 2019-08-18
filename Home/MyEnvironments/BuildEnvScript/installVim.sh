@@ -27,20 +27,28 @@ tar -xvzf v${VER}.tar.gz
 rm -f v${VER}.tar.gz
 cd vim-*
 
+
+
+
+# if enable python3 for vim, the :echo has('python') will return 0, all python can't be loaded.
+
 ./configure \
 --disable-nls \
 --enable-cscope \
 --enable-gui=no \
 --enable-multibyte  \
 --enable-pythoninterp=yes \
---enable-python3interp=yes \
+# --enable-python3interp=yes \
+# --with-python3-command=/usr/bin/python3 \
+--with-python-command=/usr/bin/python \
 --enable-rubyinterp \
 --prefix=/usr/local \
 --with-features=huge  \
---with-python-config-dir=/usr/lib/python2.7/config \
---with-python3-config-dir=/usr/lib/python3.6/config \
+--with-python-config-dir=/lib64/python2.7/config \
+# --with-python3-config-dir=/lib64/python3.6/config-3.6m-x86_64-linux-gnu \
 --with-tlib=ncurses \
---without-x
+--enable-fail-if-missing
+
 
 make
 sudo make install

@@ -29,3 +29,14 @@ git submodule update --init --recursive
 
 # python ./install.py
 python3 install.py --all
+
+
+
+# Install Vim plugin manager
+# https://github.com/VundleVim/Vundle.vim#about
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
+
+# TODO: you need to configur .vimrc file according to readme of Vundle
